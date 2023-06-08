@@ -15,7 +15,7 @@ Cette application a été développée dans le cadre d'un projet scolaire et per
 
 ## Comment lancer l'application depuis Android Studio ?
 
-1. Clonez le projet depuis GitHub en utilisant l'adresse suivante : `[https://github.com/VotreUtilisateur/NomDuProjet](https://github.com/Alexandre-COURBOIS/Android4MI)`
+1. Clonez le projet depuis GitHub en utilisant l'adresse suivante : `[https://github.com/VotreUtilisateur/NomDuProjet](https://github.com/Alexandre-COURBOIS/Android-TMDB-4MI)`
 
 2. Ouvrez Android Studio sur votre ordinateur.
 
