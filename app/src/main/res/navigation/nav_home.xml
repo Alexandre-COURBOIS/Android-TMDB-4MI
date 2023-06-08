@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="mi.videoprime.fragment.HomeFragment"
+        android:label="HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@+id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="mi.videoprime.fragment.SearchFragment"
+        android:label="SearchFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@+id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="mi.videoprime.fragment.ProfileFragment"
+        android:label="ProfilFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="mi.videoprime.fragment.RegisterFragment"
+        android:label="RegisterFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="mi.videoprime.fragment.LoginFragment"
+        android:label="LoginFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="mi.videoprime.fragment.MovieDetailsFragment"
+        android:label="MovieDetailsFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/actorDetailFragment"
+        android:name="mi.videoprime.fragment.ActorDetailsFragment"
+        android:label="ActorDetailFragment">
+        <argument
+            android:name="actor"
+            app:argType="mi.videoprime.model.SearchResult"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

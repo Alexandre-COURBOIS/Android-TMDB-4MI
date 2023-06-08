@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <corners android:radius="8dp" />
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+    <!-- Ombre coin supérieur gauche -->
+    <item>
+        <shape>
+            <solid android:color="#33000000" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- Ombre coin supérieur droit -->
+    <item>
+        <shape>
+            <solid android:color="#33000000" />
+            <corners
+                android:topRightRadius="8dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+
+    <!-- Ombre coin inférieur gauche -->
+    <item>
+        <shape>
+            <solid android:color="#33000000" />
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="8dp" />
+        </shape>
+    </item>
+
+    <!-- Ombre coin inférieur droit -->
+    <item>
+        <shape>
+            <solid android:color="#33000000" />
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="8dp"
+                android:bottomLeftRadius="0dp" />
+        </shape>
+    </item>
+</shape>

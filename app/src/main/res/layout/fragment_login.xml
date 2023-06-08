@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginFragment"
+    tools:context=".LoginFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="mi.videoprime.viewmodel.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="100dp"
+            android:layout_height="178dp"
+            android:src="@drawable/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.065" />
+
+        <EditText
+            android:id="@+id/inputIdentifier"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="304dp"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="@string/input_email_username"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="12dp"
+            android:text="@={viewModel.userLogin.identifier}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/padlock"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="@string/input_password"
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:text="@={viewModel.userLogin.password}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputIdentifier"
+            app:layout_constraintVertical_bias="0.047" />
+
+        <mi.videoprime.ui.CustomButton
+            android:id="@+id/registerButton"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="96dp"
+            android:onClick="@{() -> viewModel.login()}"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            app:buttonColor="@color/default_blue"
+            app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+            app:layout_constraintVertical_bias="0.655"
+            app:pressedButtonColor="@color/lighter_blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
